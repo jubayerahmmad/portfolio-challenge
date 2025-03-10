@@ -15,18 +15,81 @@
     ></script>
   </head>
   <body class="background">
-    <main
-      class="relative h-[9900px] container mx-auto my-0 m-2 xl:my-16 bg-gray-900 shadow-xl shadow-gray-700 z-20"
-    >
-      <nav class="h-24 bg-black grid grid-cols-8">
-        <div class="bg-black col-span-3"></div>
-        <div class="bg-gray-800 col-span-5"></div>
-      </nav>
-    </main>
     <p
       class="text-6xl text-gray-800 font-bold w-10/12 mx-auto absolute hidden xl:block top-6 left-20"
     >
       Home
     </p>
+    <main
+      class="relative h-[9900px] container mx-auto my-0 m-2 xl:my-16 bg-gray-900 shadow-xl shadow-gray-700 z-20"
+    >
+      <!-- Navbar -->
+      <nav class="h-20 grid grid-cols-8">
+        <!-- left -->
+        <div
+          class="bg-gray-800 col-span-3 flex flex-col justify-center items-center border-r border-r-gray-950"
+        >
+          <div>
+            <h3 class="text-white font-bold text-2xl lg:text-4xl">
+              Daryl <span class="text-amber-500">Smith</span>
+            </h3>
+            <p class="text-xs font-medium text-gray-400">UI/UX Designer</p>
+          </div>
+        </div>
+        <!-- right -->
+        <div
+          class="bg-gray-800 flex justify-between items-center px-6 col-span-5"
+        >
+          <!-- home icon -->
+          <div class="flex items-center gap-3">
+            <button
+              class="p-1 lg:p-2 rounded-md bg-gradient-to-r from-amber-400 via-amber-500 to-amber-700 cursor-pointer"
+            >
+              <i
+                class="fa-classic fa-solid fa-house fa-fw text-lg lg:text-3xl text-white"
+              ></i>
+            </button>
+            <p class="text-white font-black text-base lg:text-2xl">Home</p>
+          </div>
+          <!-- button -->
+          <button
+            class="rounded-full text-xs px-3 py-1.5 lg:text-base lg:px-4 lg:py-2 border border-amber-500 text-amber-500 bg-gray-950 hover:border-white hover:text-white hover:bg-gray-800 cursor-pointer"
+          >
+            Talk to Me
+          </button>
+        </div>
+      </nav>
+
+      <!-- banner -->
+      <section class="grid grid-cols-8 h-[500px]">
+        <!-- profile/left-div -->
+        <div class="flex items-center gap-2 col-span-3 bg-gray-950 p-3">
+          <!-- icons -->
+          <div class="banner-bg flex flex-col items-center gap-6">
+            <i
+              class="fa-classic fa-solid fa-house fa-fw text-xl text-gray-600 hover:text-amber-500"
+            ></i>
+            <i
+              class="fa-solid fa-user text-xl text-gray-600 hover:text-amber-500"
+            ></i>
+            <i
+              class="fa-solid fa-briefcase text-xl text-gray-600 hover:text-amber-500"
+            ></i>
+            <i
+              class="fa-solid fa-pen-to-square text-xl text-gray-600 hover:text-amber-500"
+            ></i>
+            <i
+              class="fa-solid fa-phone text-xl text-gray-600 hover:text-amber-500"
+            ></i>
+          </div>
+          <!-- picture -->
+          <div>
+            <img src="./assets/profile.png" alt="Profile Picture" />
+          </div>
+        </div>
+        <!-- intro/right-div -->
+        <div class="col-span-5 bg-gray-800"></div>
+      </section>
+    </main>
   </body>
 </html>
