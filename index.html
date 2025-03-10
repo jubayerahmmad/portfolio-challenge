@@ -27,10 +27,10 @@
       <nav class="h-20 grid grid-cols-8">
         <!-- left -->
         <div
-          class="bg-gray-800 col-span-3 flex flex-col justify-center items-center border-r border-r-gray-950"
+          class="bg-gray-800 col-span-2 flex flex-col justify-center items-center border-r border-r-gray-950"
         >
           <div>
-            <h3 class="text-white font-bold text-2xl lg:text-4xl">
+            <h3 class="text-white font-bold text-base md:text-2xl lg:text-4xl">
               Daryl <span class="text-amber-500">Smith</span>
             </h3>
             <p class="text-xs font-medium text-gray-400">UI/UX Designer</p>
@@ -38,7 +38,7 @@
         </div>
         <!-- right -->
         <div
-          class="bg-gray-800 flex justify-between items-center px-6 col-span-5"
+          class="bg-gray-800 flex justify-between items-center px-6 col-span-6"
         >
           <!-- home icon -->
           <div class="flex items-center gap-3">
@@ -61,11 +61,15 @@
       </nav>
 
       <!-- banner -->
-      <section class="grid grid-cols-8 h-[500px]">
+      <section class="grid grid-cols-1 lg:grid-cols-8 bg-gray-900">
         <!-- profile/left-div -->
-        <div class="flex items-center gap-2 col-span-3 bg-gray-950 p-3">
+        <div
+          class="flex items-center w-full justify-center lg:col-span-3 xl:col-span-2"
+        >
           <!-- icons -->
-          <div class="banner-bg flex flex-col items-center gap-6">
+          <div
+            class="banner-bg h-full flex flex-col justify-center items-center gap-6 p-4"
+          >
             <i
               class="fa-classic fa-solid fa-house fa-fw text-xl text-gray-600 hover:text-amber-500"
             ></i>
@@ -83,12 +87,85 @@
             ></i>
           </div>
           <!-- picture -->
-          <div>
-            <img src="./assets/profile.png" alt="Profile Picture" />
+          <div class="bg-gray-950 relative">
+            <img
+              class=""
+              src="./assets/profile.png"
+              alt="Profile Picture"
+              aria-label="Profile Picture"
+            />
+            <div class="bg-black h-12 w-full -mt-1">
+              <div class="flex gap-4 items-center justify-center p-2">
+                <p class="rounded-full bg-gray-800 px-3 py-1.5">
+                  <i class="fa-brands fa-facebook-f text-white text-center"></i>
+                </p>
+                <p class="rounded-full bg-gray-800 px-3 py-1.5">
+                  <i class="fa-brands fa-twitter text-white text-center"></i>
+                </p>
+                <p class="rounded-full bg-gray-800 px-3 py-1.5">
+                  <i class="fa-brands fa-pinterest text-white text-center"></i>
+                </p>
+                <p class="rounded-full bg-gray-800 px-3 py-1.5">
+                  <i
+                    class="fa-brands fa-linkedin-in text-white text-center"
+                  ></i>
+                </p>
+                <p class="rounded-full bg-gray-800 px-3 py-1.5">
+                  <i class="fa-brands fa-instagram text-white text-center"></i>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <!-- intro/right-div -->
-        <div class="col-span-5 bg-gray-800"></div>
+        <div
+          class="flex items-center justify-between lg:col-span-5 xl:col-span-6 bg-gray-900 pt-8 pl-4 lg:pl-8"
+        >
+          <!-- Intro -->
+          <div class="space-y-6">
+            <h3 class="text-amber-500 font-bold uppercase">Introduction</h3>
+            <h1 class="font-bold text-3xl md:text-4xl lg:text-6xl text-white">
+              I'm a Creative Developer & UI/UX Design Expert
+            </h1>
+            <h4 class="font-semibold text-sm lg:text-base text-gray-300">
+              24 years / Robert Smith / UK London
+            </h4>
+
+            <p class="text-gray-400 text-xs lg:text-sm">
+              Prolific, full stack web developer with a passion for metrics and
+              beating former "best-yets. Prototyped 25 new product features per
+              year for Flexor, Inc. Decreased rework by 22% and costs by 15%.
+              Consistently receive high user experience scores for all web
+              development projects, including a 55% increase for Flexor, Inc.
+              Passionate about building world class web applications. One of my
+              sites received a 2020 Webby for Best Navigation and Structure.
+            </p>
+
+            <button
+              class="lg:text-lg text-white rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-700 cursor-pointer px-2 py-1 lg:px-3 lg:py-1.5"
+            >
+              Download CV <i class="fa-solid fa-download"></i>
+            </button>
+          </div>
+          <!-- lang -->
+          <div
+            class="banner-bg-2 h-full flex flex-col justify-end items-end gap-3 p-4"
+          >
+            <!-- <p class="vertical-text text-gray-500">
+              © design by themefisher developed by gethugothemes
+            </p> -->
+            <button
+              class="rounded-full px-2 py-1 font-bold bg-gradient-to-r from-amber-400 via-amber-500 to-amber-700 cursor-pointer"
+            >
+              Fr
+            </button>
+            <button
+              class="rounded-full px-2 py-1 font-bold bg-gray-700 text-white cursor-pointer"
+            >
+              En
+            </button>
+          </div>
+        </div>
       </section>
     </main>
   </body>

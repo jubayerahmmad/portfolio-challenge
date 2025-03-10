@@ -13,3 +13,18 @@ body {
   background-repeat: repeat-y;
   height: 10000px;
 }
+.banner-bg {
+  background-image: url("../assets/banner-bg-2.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.banner-bg-2 {
+  background-image: url("../assets/banner-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.vertical-text {
+  transform: rotate(90deg);
+  /* white-space: nowrap; */
+}
