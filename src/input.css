@@ -35,3 +35,7 @@ body {
 .dark-overlay {
   @apply absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300;
 }
+
+.started-btn {
+  @apply px-3 py-1.5 border border-amber-500 text-amber-500 font-semibold rounded-md cursor-pointer hover:text-white hover:bg-gradient-to-tr from-amber-400 via-amber-500 to-amber-600;
+}
