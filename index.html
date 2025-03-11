@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jubayer Ahmmad - A Frontend Developer specializing in React.js, Next.js, and modern web technologies. Passionate about building user-friendly, responsive, and performant web applications."
+    />
+    <meta
+      name="keywords"
+      content="Frontend Developer, React.js, Next.js, JavaScript, Web Developer, Portfolio"
+    />
+    <meta name="author" content="Jubayer Ahmmad" />
     <title>Portfolio</title>
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <!-- CSS linking -->
@@ -21,7 +30,7 @@
       Home
     </p>
     <main
-      class="relative h-[9900px] container mx-auto my-0 m-2 xl:my-16 bg-gray-900 shadow-xl shadow-gray-700 z-20"
+      class="relative container mx-auto my-0 m-2 xl:my-16 bg-gray-900 shadow-xl shadow-gray-700 z-20"
     >
       <!-- Navbar -->
       <nav class="h-20 grid grid-cols-8">
@@ -43,6 +52,7 @@
           <!-- home icon -->
           <div class="flex items-center gap-3">
             <button
+              aria-label="Home"
               class="p-1 lg:p-2 rounded-md bg-gradient-to-r from-amber-400 via-amber-500 to-amber-700 cursor-pointer"
             >
               <i
@@ -53,6 +63,7 @@
           </div>
           <!-- button -->
           <button
+            aria-label="Contact Me"
             class="rounded-full text-xs px-3 py-1.5 lg:text-base lg:px-4 lg:py-2 border border-amber-500 text-amber-500 bg-gray-950 hover:border-white hover:text-white hover:bg-gray-800 cursor-pointer"
           >
             Talk to Me
@@ -61,7 +72,7 @@
       </nav>
 
       <!-- banner -->
-      <section class="grid grid-cols-1 lg:grid-cols-8">
+      <section class="section-grid">
         <!-- profile/left-div -->
         <div
           class="flex items-center w-full justify-center lg:col-span-3 xl:col-span-2"
@@ -87,7 +98,7 @@
             ></i>
           </div>
           <!-- picture -->
-          <div class="bg-gray-950 relative">
+          <picture class="bg-gray-950 relative">
             <img
               class=""
               src="./assets/profile.png"
@@ -115,14 +126,14 @@
                 </p>
               </div>
             </div>
-          </div>
+          </picture>
         </div>
         <!-- intro/right-div -->
         <div
           class="flex items-center justify-between lg:col-span-5 xl:col-span-6 bg-gray-900 pt-8 pl-4 lg:pl-8"
         >
           <!-- Intro -->
-          <div class="space-y-6 px-3">
+          <div class="space-y-6">
             <h3 class="text-amber-500 font-bold uppercase">Introduction</h3>
             <h1 class="font-bold text-3xl md:text-4xl lg:text-6xl text-white">
               I'm a Creative Developer & UI/UX Design Expert
@@ -142,7 +153,8 @@
             </p>
 
             <button
-              class="lg:text-lg text-white rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-700 cursor-pointer px-2 py-1 lg:px-3 lg:py-1.5"
+              aria-label="Download CV"
+              class="lg:text-lg text-white rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-700 hover:bg-gradient-to-br cursor-pointer px-2 py-1 lg:px-3 lg:py-1.5"
             >
               Download CV <i class="fa-solid fa-download"></i>
             </button>
@@ -169,12 +181,11 @@
       </section>
 
       <!-- Resume Section-->
-
-      <section class="grid grid-cols-1 lg:grid-cols-8">
+      <section class="section-grid">
         <div class="lg:col-span-2"></div>
         <!-- resume -->
         <div class="lg:col-span-6 p-6">
-          <h1 class="font-bold text-white text-2xl lg:text-4xl">Resume</h1>
+          <h1 class="font-bold text-white text-2xl lg:text-5xl">Resume</h1>
           <!-- education -->
           <div class="space-y-2">
             <h1
@@ -310,11 +321,11 @@
       </section>
 
       <!-- Skills Section -->
-      <section class="grid grid-cols-1 lg:grid-cols-8">
+      <section class="section-grid">
         <div class="lg:col-span-2"></div>
         <!-- skilss -->
         <div class="lg:col-span-6 p-6">
-          <h1 class="font-bold text-white text-2xl lg:text-4xl">Skills</h1>
+          <h1 class="font-bold text-white text-2xl lg:text-5xl">Skills</h1>
           <!-- progresss -->
           <div class="space-y-3 py-4">
             <div class="ui-progress">
@@ -390,6 +401,204 @@
                   style="width: 97%"
                 ></div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section class="section-grid">
+        <div class="lg:col-span-2"></div>
+
+        <div class="lg:col-span-6 p-6">
+          <h1 class="font-bold text-white text-2xl lg:text-5xl">Portfolio</h1>
+          <!-- portfolio nav -->
+          <div
+            class="bg-black py-4 rounded-md text-white flex items-center justify-around my-3 text-xs lg:text-xl"
+          >
+            <a
+              class="before:w-full before:bg-amber-500 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:-bottom-4 text-amber-500 transition-all duration-300 before:left-0 cursor-pointer"
+              >All</a
+            >
+            <a class="nav-hover">Graphics Design</a>
+            <a class="nav-hover">Mobile App</a>
+            <a class="nav-hover">Photography</a>
+            <a class="nav-hover">UI/UX Design</a>
+          </div>
+          <!-- Portfolios -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="space-y-4">
+              <!-- image1 -->
+              <div class="group relative">
+                <figure class="relative">
+                  <img
+                    src="./assets/portfolio-img/portfolio7.png"
+                    alt="portfolio-1"
+                    class="w-full h-full"
+                  />
+                  <div class="dark-overlay">
+                    <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
+                    <p class="text-gray-300 text-sm">
+                      Figma mockup PSD editable
+                    </p>
+                    <span
+                      class="p-2 rounded-full text-white bg-gray-900 absolute right-3 top-3"
+                      ><i class="fa-classic fa-solid fa-link fa-fw"> </i>
+                    </span>
+                  </div>
+                </figure>
+              </div>
+
+              <!-- image2 -->
+              <div class="group relative">
+                <figure class="relative">
+                  <img
+                    src="./assets/portfolio-img/portfolio2.png"
+                    alt="portfolio-2"
+                    class="w-full h-auto"
+                  />
+                  <div class="dark-overlay">
+                    <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
+                    <p class="text-gray-300 text-sm">
+                      Figma mockup PSD editable
+                    </p>
+                    <span
+                      class="p-2 rounded-full text-white bg-gray-900 absolute right-3 top-3"
+                      ><i class="fa-classic fa-solid fa-link fa-fw"> </i>
+                    </span>
+                  </div>
+                </figure>
+              </div>
+
+              <!-- image3 -->
+              <div class="group relative">
+                <figure class="relative">
+                  <img
+                    src="./assets/portfolio-img/portfolio5.png"
+                    alt="portfolio-3"
+                    class="w-full h-auto"
+                  />
+                  <div class="dark-overlay">
+                    <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
+                    <p class="text-gray-300 text-sm">
+                      Figma mockup PSD editable
+                    </p>
+                    <span
+                      class="p-2 rounded-full text-white bg-gray-900 absolute right-3 top-3"
+                      ><i class="fa-classic fa-solid fa-link fa-fw"> </i>
+                    </span>
+                  </div>
+                </figure>
+              </div>
+            </div>
+
+            <div class="space-y-5 xl:space-y-6">
+              <!-- image4 -->
+              <div class="group relative">
+                <figure class="relative">
+                  <img
+                    src="./assets/portfolio-img/portfolio3.png"
+                    alt="portfolio-4"
+                    class="w-full h-auto"
+                  />
+                  <div class="dark-overlay">
+                    <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
+                    <p class="text-gray-300 text-sm">
+                      Figma mockup PSD editable
+                    </p>
+                    <span
+                      class="p-2 rounded-full text-white bg-gray-900 absolute right-3 top-3"
+                      ><i class="fa-classic fa-solid fa-link fa-fw"> </i>
+                    </span>
+                  </div>
+                </figure>
+              </div>
+
+              <!-- image5-->
+              <div class="group relative">
+                <figure class="relative">
+                  <img
+                    src="./assets/portfolio-img/portfolio1.png"
+                    alt="portfolio-5"
+                    class="w-full h-auto"
+                  />
+                  <div class="dark-overlay">
+                    <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
+                    <p class="text-gray-300 text-sm">
+                      Figma mockup PSD editable
+                    </p>
+                    <span
+                      class="p-2 rounded-full text-white bg-gray-900 absolute right-3 top-3"
+                      ><i class="fa-classic fa-solid fa-link fa-fw"> </i>
+                    </span>
+                  </div>
+                </figure>
+              </div>
+
+              <!-- image6 -->
+              <div class="group relative">
+                <figure class="relative">
+                  <img
+                    src="./assets/portfolio-img/portfolio6.png"
+                    alt="portfolio-6"
+                    class="w-full h-auto"
+                  />
+                  <div class="dark-overlay">
+                    <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
+                    <p class="text-gray-300 text-sm">
+                      Figma mockup PSD editable
+                    </p>
+                    <span
+                      class="p-2 rounded-full text-white bg-gray-900 absolute right-3 top-3"
+                      ><i class="fa-classic fa-solid fa-link fa-fw"> </i>
+                    </span>
+                  </div>
+                </figure>
+              </div>
+
+              <!-- image7 -->
+              <div class="group relative border">
+                <figure class="relative">
+                  <img
+                    src="./assets/portfolio-img/portfolio4.png"
+                    alt="portfolio-7"
+                    class="w-full h-auto"
+                  />
+                  <div class="dark-overlay">
+                    <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
+                    <p class="text-gray-300 text-sm">
+                      Figma mockup PSD editable
+                    </p>
+                    <span
+                      class="p-2 rounded-full text-white bg-gray-900 absolute right-3 top-3"
+                      ><i class="fa-classic fa-solid fa-link fa-fw"> </i>
+                    </span>
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <!-- bottom row -->
+          <div class="flex flex-col md:flex-row gap-4 items-center mt-4">
+            <div
+              class="h-52 flex flex-col justify-center items-center w-full bg-black text-center relative"
+            >
+              <h3 class="text-xl font-bold text-white">Website design</h3>
+              <p class="text-gray-400">Fitness Studio Website</p>
+              <span
+                class="p-2 rounded-full text-white bg-gray-900 absolute right-3 top-3"
+                ><i class="fa-classic fa-solid fa-link fa-fw"> </i>
+              </span>
+            </div>
+            <div
+              class="h-52 flex flex-col justify-center items-center w-full bg-black text-center relative"
+            >
+              <h3 class="text-xl font-bold text-white">Photography</h3>
+              <p class="text-gray-400">Photography Project</p>
+              <span
+                class="p-2 rounded-full text-white bg-gray-900 absolute right-3 top-3"
+                ><i class="fa-classic fa-solid fa-link fa-fw"></i
+              ></span>
             </div>
           </div>
         </div>
