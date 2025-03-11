@@ -724,6 +724,70 @@
           </div>
         </div>
       </section>
+
+      <!-- Contact Section -->
+      <section class="section-grid pb-10">
+        <div class="lg:col-span-2"></div>
+
+        <!-- form -->
+        <div class="lg:col-span-6 p-6">
+          <h1 class="font-bold text-white text-2xl lg:text-5xl">Contact</h1>
+          <form class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="flex flex-col gap-2">
+              <label class="text-white" for="fname"> First Name* </label>
+              <input
+                class="px-4 py-2 text-gray-100 rounded-md border border-amber-950 focus:border-amber-500 outline-none bg-gray-950"
+                type="text"
+                placeholder="First Name"
+                id="fname"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="text-white" for="lname"> Last Name* </label>
+              <input
+                class="px-4 py-2 text-gray-100 rounded-md border border-amber-950 focus:border-amber-500 outline-none bg-gray-950"
+                type="text"
+                placeholder="First Name"
+                id="lname"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="text-white" for="email"> Email* </label>
+              <input
+                class="px-4 py-2 text-gray-100 rounded-md border border-amber-950 focus:border-amber-500 outline-none bg-gray-950"
+                type="email"
+                placeholder="Enter Email"
+                id="email"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="text-white" for="phone"> Phone* </label>
+              <input
+                class="px-4 py-2 text-gray-100 rounded-md border border-amber-950 focus:border-amber-500 outline-none bg-gray-950"
+                type="tel"
+                placeholder="Phone"
+                id="phone"
+              />
+            </div>
+            <div class="flex flex-col gap-2 md:col-span-2">
+              <label class="text-white" for="message"> Message* </label>
+              <textarea
+                class="px-4 py-2 text-gray-100 rounded-md border border-amber-950 focus:border-amber-500 outline-none bg-gray-950"
+                placeholder="Message"
+                rows="5"
+                id="message"
+              ></textarea>
+            </div>
+            <button
+              aria-label="Send Message"
+              type="button"
+              class="lg:text-l md:col-span-2 text-white rounded-md bg-gradient-to-r from-amber-400 via-amber-500 to-amber-700 hover:bg-gradient-to-br cursor-pointer px-2 py-1 lg:px-3 lg:py-1.5"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
   </body>
 </html>
