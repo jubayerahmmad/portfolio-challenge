@@ -15,6 +15,7 @@
     <title>Portfolio</title>
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <!-- CSS linking -->
+    <link rel="preload" href="./src/output.css" as="style" />
     <link href="./src/output.css" rel="stylesheet" />
 
     <!-- Fontawesome KIT -->
@@ -30,10 +31,10 @@
       Home
     </p>
     <main
-      class="relative container mx-auto my-0 m-2 xl:my-16 bg-gray-900 shadow-xl shadow-gray-700 z-20"
+      class="relative container mx-auto my-0 m-2 xl:my-16 bg-[#171B1A] shadow-xl shadow-gray-700 z-20"
     >
       <!-- Navbar -->
-      <nav class="h-20 grid grid-cols-8">
+      <nav id="home" class="h-20 grid grid-cols-8">
         <!-- left -->
         <div
           class="bg-gray-800 col-span-2 flex flex-col justify-center items-center border-r border-r-gray-950"
@@ -51,21 +52,21 @@
         >
           <!-- home icon -->
           <div class="flex items-center gap-3">
-            <button
+            <a
+              href="#home"
               aria-label="Home"
               class="p-1 lg:p-2 rounded-md bg-gradient-to-r from-amber-400 via-amber-500 to-amber-700 cursor-pointer"
             >
               <i
                 class="fa-classic fa-solid fa-house fa-fw text-lg lg:text-3xl text-white"
               ></i>
-            </button>
-            <p class="text-white font-black text-base lg:text-2xl">Home</p>
+            </a>
+            <span class="text-white font-black text-base lg:text-2xl"
+              >Home</span
+            >
           </div>
           <!-- button -->
-          <button
-            aria-label="Contact Me"
-            class="rounded-full text-xs px-3 py-1.5 lg:text-base lg:px-4 lg:py-2 border border-amber-500 text-amber-500 bg-gray-950 hover:border-white hover:text-white hover:bg-gray-800 cursor-pointer"
-          >
+          <button aria-label="Contact Me" class="started-btn rounded-full">
             Talk to Me
           </button>
         </div>
@@ -79,31 +80,40 @@
         >
           <!-- icons -->
           <div
-            class="banner-bg h-full flex flex-col justify-center items-center gap-6 p-4"
+            class="banner-bg h-full flex flex-col justify-center items-center gap-16 p-4"
           >
-            <i
-              class="fa-classic fa-solid fa-house fa-fw text-xl text-gray-600 hover:text-amber-500"
-            ></i>
-            <i
-              class="fa-solid fa-user text-xl text-gray-600 hover:text-amber-500"
-            ></i>
-            <i
-              class="fa-solid fa-briefcase text-xl text-gray-600 hover:text-amber-500"
-            ></i>
-            <i
-              class="fa-solid fa-pen-to-square text-xl text-gray-600 hover:text-amber-500"
-            ></i>
-            <i
-              class="fa-solid fa-phone text-xl text-gray-600 hover:text-amber-500"
-            ></i>
+            <a href="#home" aria-label="Go to home section"
+              ><i
+                class="fa-classic fa-solid fa-house fa-fw text-xl text-gray-600 hover:text-amber-500 hover:scale-125 duration-200"
+              ></i
+            ></a>
+            <a href="#resume" aria-label="Go to resume section">
+              <i
+                class="fa-solid fa-user text-xl text-gray-600 hover:text-amber-500 hover:scale-125 duration-200"
+              ></i
+            ></a>
+            <a href="#portfolio" aria-label="Go to Portfolio section">
+              <i
+                class="fa-solid fa-briefcase text-xl text-gray-600 hover:text-amber-500 hover:scale-125 duration-200"
+              ></i
+            ></a>
+            <a href="#skills" aria-label="Go to Skills section">
+              <i
+                class="fa-solid fa-pen-to-square text-xl text-gray-600 hover:text-amber-500 hover:scale-125 duration-200"
+              ></i
+            ></a>
+            <a href="#contact" aria-label="Go to Contact section"
+              ><i
+                class="fa-solid fa-phone text-xl text-gray-600 hover:text-amber-500 hover:scale-125 duration-200"
+              ></i
+            ></a>
           </div>
           <!-- picture -->
-          <picture class="bg-gray-950 relative">
+          <div class="bg-gray-950 relative">
             <img
-              class=""
+              loading="lazy"
               src="./assets/profile.png"
               alt="Profile Picture"
-              aria-label="Profile Picture"
             />
             <div class="bg-black h-12 w-full -mt-1">
               <div class="flex gap-4 items-center justify-center p-2">
@@ -126,7 +136,7 @@
                 </p>
               </div>
             </div>
-          </picture>
+          </div>
         </div>
         <!-- intro/right-div -->
         <div
@@ -134,13 +144,13 @@
         >
           <!-- Intro -->
           <div class="space-y-6">
-            <h3 class="text-amber-500 font-bold uppercase">Introduction</h3>
-            <h1 class="font-bold text-3xl md:text-4xl lg:text-6xl text-white">
+            <h1 class="text-gradient font-bold uppercase">Introduction</h1>
+            <h2 class="font-bold text-3xl md:text-4xl lg:text-6xl text-white">
               I'm a Creative Developer & UI/UX Design Expert
-            </h1>
-            <h4 class="font-semibold text-sm lg:text-base text-gray-300">
+            </h2>
+            <p class="font-semibold text-sm lg:text-base text-gray-300">
               24 years / Robert Smith / UK London
-            </h4>
+            </p>
 
             <p class="text-gray-400 text-xs lg:text-sm">
               Prolific, full stack web developer with a passion for metrics and
@@ -163,9 +173,9 @@
           <div
             class="banner-bg-2 h-full flex flex-col justify-end items-end gap-3 p-4"
           >
-            <!-- <p class="vertical-text text-gray-500">
+            <p class="vertical-text text-gray-500">
               © design by themefisher developed by gethugothemes
-            </p> -->
+            </p>
             <button
               class="rounded-full px-2 py-1 font-bold bg-gradient-to-r from-amber-400 via-amber-500 to-amber-700 cursor-pointer"
             >
@@ -181,7 +191,7 @@
       </section>
 
       <!-- Resume Section-->
-      <section class="section-grid">
+      <section id="resume" class="section-grid">
         <div class="lg:col-span-2"></div>
         <!-- resume -->
         <div class="lg:col-span-6 p-6">
@@ -201,6 +211,7 @@
                 class="h-[630px] md:h-[480px] lg:h-[450px]"
                 src="./assets/timeline.png"
                 alt="Vertical Timeline"
+                loading="lazy"
               />
 
               <div class="space-y-2">
@@ -213,10 +224,10 @@
                   <div
                     class="bg-gray-950 border-gray-800 rounded-md p-4 border space-y-1"
                   >
-                    <h3 class="text-amber-500 font-bold text-xl">
+                    <h2 class="text-gradient font-bold text-xl">
                       Harvard University
-                    </h3>
-                    <p class="text-gray-600 pb-2">
+                    </h2>
+                    <p class="text-gray-400 pb-2">
                       B.A. and M.S. Computer Science
                     </p>
                     <p class="text-gray-400 border-t border-t-gray-400 py-3">
@@ -237,10 +248,10 @@
                   <div
                     class="bg-gray-950 border-gray-800 rounded-md p-4 border space-y-1"
                   >
-                    <h3 class="text-amber-500 font-bold text-xl">
+                    <h2 class="text-gradient font-bold text-xl">
                       Helwan University
-                    </h3>
-                    <p class="text-gray-600 pb-2">Bachelor Degree</p>
+                    </h2>
+                    <p class="text-gray-400 pb-2">Bachelor Degree</p>
                     <p class="text-gray-400 border-t border-t-gray-400 py-3">
                       Graduated with a degree in Information Technology,
                       specializing in web development and graphic design.
@@ -267,6 +278,7 @@
                 class="h-[630px] md:h-[480px] lg:h-[450px]"
                 src="./assets/timeline.png"
                 alt="Vertical Timeline"
+                loading="lazy"
               />
 
               <div class="space-y-2">
@@ -279,10 +291,10 @@
                   <div
                     class="bg-gray-950 border-gray-800 rounded-md p-4 border space-y-1"
                   >
-                    <h3 class="text-amber-500 font-bold text-xl">
+                    <h2 class="text-gradient font-bold text-xl">
                       UI/UX Design
-                    </h3>
-                    <p class="text-gray-600 pb-2">Website Design</p>
+                    </h2>
+                    <p class="text-gray-400 pb-2">Website Design</p>
                     <p class="text-gray-400 border-t border-t-gray-400 py-3">
                       Led the design and development of user-friendly websites
                       and applications for various clients. Collaborated with
@@ -301,10 +313,10 @@
                   <div
                     class="bg-gray-950 border-gray-800 rounded-md p-4 border space-y-1"
                   >
-                    <h3 class="text-amber-500 font-bold text-xl">
+                    <h2 class="text-gradient text-amber-500 font-bold text-xl">
                       Junior Web Designers
-                    </h3>
-                    <p class="text-gray-600 pb-2">Product Design</p>
+                    </h2>
+                    <p class="text-gray-400 pb-2">Product Design</p>
                     <p class="text-gray-400 border-t border-t-gray-400 py-3">
                       Assisted in the design and development of web-based
                       products, focusing on user experience and interface
@@ -321,7 +333,7 @@
       </section>
 
       <!-- Skills Section -->
-      <section class="section-grid">
+      <section id="skills" class="section-grid">
         <div class="lg:col-span-2"></div>
         <!-- skils -->
         <div class="lg:col-span-6 p-6">
@@ -407,7 +419,7 @@
       </section>
 
       <!-- Portfolio Section -->
-      <section class="section-grid">
+      <section id="portfolio" class="section-grid">
         <div class="lg:col-span-2"></div>
 
         <div class="lg:col-span-6 p-6">
@@ -416,14 +428,15 @@
           <div
             class="bg-black py-4 rounded-md text-white flex items-center justify-around my-3 text-xs lg:text-xl"
           >
-            <a
+            <p
               class="before:w-full before:bg-amber-500 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:-bottom-4 text-amber-500 transition-all duration-300 before:left-0 cursor-pointer"
-              >All</a
             >
-            <a class="nav-hover">Graphics Design</a>
-            <a class="nav-hover">Mobile App</a>
-            <a class="nav-hover">Photography</a>
-            <a class="nav-hover">UI/UX Design</a>
+              All
+            </p>
+            <p class="nav-hover">Graphics Design</p>
+            <p class="nav-hover">Mobile App</p>
+            <p class="nav-hover">Photography</p>
+            <p class="nav-hover">UI/UX Design</p>
           </div>
           <!-- Portfolios -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -434,7 +447,8 @@
                   <img
                     src="./assets/portfolio-img/portfolio7.png"
                     alt="portfolio-1"
-                    class="w-full h-full"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                   <div class="dark-overlay">
                     <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
@@ -455,7 +469,8 @@
                   <img
                     src="./assets/portfolio-img/portfolio2.png"
                     alt="portfolio-2"
-                    class="w-full h-auto"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                   <div class="dark-overlay">
                     <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
@@ -476,7 +491,8 @@
                   <img
                     src="./assets/portfolio-img/portfolio5.png"
                     alt="portfolio-3"
-                    class="w-full h-auto"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                   <div class="dark-overlay">
                     <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
@@ -499,7 +515,8 @@
                   <img
                     src="./assets/portfolio-img/portfolio3.png"
                     alt="portfolio-4"
-                    class="w-full h-auto"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                   <div class="dark-overlay">
                     <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
@@ -520,7 +537,8 @@
                   <img
                     src="./assets/portfolio-img/portfolio1.png"
                     alt="portfolio-5"
-                    class="w-full h-auto"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                   <div class="dark-overlay">
                     <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
@@ -541,7 +559,8 @@
                   <img
                     src="./assets/portfolio-img/portfolio6.png"
                     alt="portfolio-6"
-                    class="w-full h-auto"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                   <div class="dark-overlay">
                     <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
@@ -562,7 +581,8 @@
                   <img
                     src="./assets/portfolio-img/portfolio4.png"
                     alt="portfolio-7"
-                    class="w-full h-auto"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                   <div class="dark-overlay">
                     <h4 class="text-white font-bold text-lg">Figma Mockup</h4>
@@ -621,7 +641,8 @@
                   <img
                     src="./assets/blog/blog1.png"
                     alt="A photographer capturing a mountain view"
-                    class="w-full"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                 </figure>
                 <div class="p-5">
@@ -659,7 +680,8 @@
                   <img
                     src="./assets/blog/blog3.png"
                     alt="About Responsive Web Design"
-                    class="w-full"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                 </figure>
                 <div class="p-5">
@@ -699,7 +721,8 @@
                   <img
                     src="./assets/blog/blog6.png"
                     alt="About UI Design"
-                    class="w-full"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                 </figure>
                 <div class="p-5">
@@ -741,7 +764,8 @@
                   <img
                     src="./assets/blog/blog2.png"
                     alt="Adventure Travel"
-                    class="w-full"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                 </figure>
                 <div class="p-5">
@@ -781,7 +805,8 @@
                   <img
                     src="./assets/blog/blog4.png"
                     alt="travel destination"
-                    class="w-full"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                 </figure>
                 <div class="p-5">
@@ -821,7 +846,8 @@
                   <img
                     src="./assets/blog/blog5.png"
                     alt="A man travelling"
-                    class="w-full"
+                    class="h-auto w-full"
+                    loading="lazy"
                   />
                 </figure>
                 <div class="p-5">
@@ -981,7 +1007,7 @@
       </section>
 
       <!-- Contact Section -->
-      <section class="section-grid pb-10">
+      <section id="contact" class="section-grid pb-10">
         <div class="lg:col-span-2"></div>
 
         <!-- form -->
@@ -999,6 +1025,7 @@
                 type="text"
                 placeholder="First Name"
                 id="fname"
+                name="fname"
                 required
               />
             </div>
@@ -1009,6 +1036,7 @@
                 type="text"
                 placeholder="First Name"
                 id="lname"
+                name="lname"
                 required
               />
             </div>
@@ -1019,6 +1047,7 @@
                 type="email"
                 placeholder="Enter Email"
                 id="email"
+                name="email"
                 required
               />
             </div>
@@ -1028,6 +1057,7 @@
                 class="px-4 py-2 text-gray-100 rounded-md border border-amber-950 focus:border-amber-500 outline-none bg-gray-950"
                 type="tel"
                 placeholder="Phone"
+                name="phone"
                 id="phone"
                 required
               />
@@ -1037,6 +1067,7 @@
               <textarea
                 class="px-4 py-2 text-gray-100 rounded-md border border-amber-950 focus:border-amber-500 outline-none bg-gray-950"
                 placeholder="Message"
+                name="message"
                 rows="5"
                 id="message"
                 required
@@ -1044,7 +1075,7 @@
             </div>
             <button
               aria-label="Send Message"
-              type="button"
+              type="submit"
               class="lg:text-l md:col-span-2 text-white rounded-md bg-gradient-to-r from-amber-400 via-amber-500 to-amber-700 hover:bg-gradient-to-br cursor-pointer px-2 py-1 lg:px-3 lg:py-1.5"
             >
               Send Message

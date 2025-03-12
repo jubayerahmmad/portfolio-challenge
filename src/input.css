@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: rgb(31, 28, 28);
   font-family: "DM Sans", sans-serif;
+  font-display: swap;
 }
 
 .background {
@@ -22,6 +27,19 @@ body {
   background-image: url("../assets/banner-bg.png");
   background-repeat: no-repeat;
   background-position: bottom;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  right: 15%;
+  top: 50%;
+  font-size: 12px;
+  color: gray;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-[#F5BD4D] to-[#F89222] bg-clip-text text-transparent;
 }
 
 .nav-hover {
